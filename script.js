@@ -15,13 +15,7 @@ const categoryLabels = {
 };
 const categoryOrder = Object.keys(categoryLabels);
 const titleCollator = new Intl.Collator(undefined, { numeric: true, sensitivity: 'base' });
-const portfolioDatabaseName = 'mikaClassPortfolio';
-const portfolioStoreName = 'documents';
 let entries = [];
-let staticEntries = [];
-let localRecordsById = new Map();
-let localDatabase;
-const localObjectUrls = [];
 
 function createId() {
   return (window.crypto && crypto.randomUUID)
@@ -92,125 +86,6 @@ async function readStaticEntries() {
     }));
 }
 
-function openPortfolioDatabase() {
-  if (!('indexedDB' in window)) return Promise.reject(new Error('This browser does not support local portfolio storage.'));
-  return new Promise((resolve, reject) => {
-    const request = indexedDB.open(portfolioDatabaseName, 1);
-    request.onupgradeneeded = () => {
-      if (!request.result.objectStoreNames.contains(portfolioStoreName)) {
-        request.result.createObjectStore(portfolioStoreName, { keyPath: 'id' });
-      }
-    };
-    request.onsuccess = () => {
-      request.result.onversionchange = () => request.result.close();
-      resolve(request.result);
-    };
-    request.onerror = () => reject(request.error || new Error('Could not open local portfolio storage.'));
-    request.onblocked = () => reject(new Error('Close other portfolio tabs and try again.'));
-  });
-}
-
-function getLocalRecords(database) {
-  return new Promise((resolve, reject) => {
-    const transaction = database.transaction(portfolioStoreName, 'readonly');
-    const request = transaction.objectStore(portfolioStoreName).getAll();
-    request.onsuccess = () => resolve(request.result || []);
-    request.onerror = () => reject(request.error || new Error('Could not read local portfolio entries.'));
-    transaction.onabort = () => reject(transaction.error || new Error('Could not read local portfolio entries.'));
-  });
-}
-
-function saveLocalRecord(record) {
-  return new Promise((resolve, reject) => {
-    const transaction = localDatabase.transaction(portfolioStoreName, 'readwrite');
-    transaction.objectStore(portfolioStoreName).put(record);
-    transaction.oncomplete = () => resolve();
-    transaction.onerror = () => reject(transaction.error || new Error('Could not save this entry.'));
-    transaction.onabort = () => reject(transaction.error || new Error('Could not save this entry.'));
-  });
-}
-
-function revokeLocalUrls() {
-  for (const url of localObjectUrls.splice(0)) URL.revokeObjectURL(url);
-}
-
-function normalizeLocalAttachment(attachment) {
-  if (!attachment || typeof attachment !== 'object') return null;
-  if (attachment.blob instanceof Blob) {
-    const url = URL.createObjectURL(attachment.blob);
-    localObjectUrls.push(url);
-    return {
-      name: String(attachment.name || attachment.blob.name || 'Portfolio file'),
-      type: String(attachment.type || attachment.blob.type || 'application/octet-stream'),
-      size: Number(attachment.size) || attachment.blob.size,
-      url
-    };
-  }
-  return normalizeStaticAttachment(attachment, staticDataUrl);
-}
-
-function mergeAttachments(staticFiles, localFiles) {
-  const merged = [];
-  const keys = new Set();
-  for (const file of [...(localFiles || []), ...(staticFiles || [])]) {
-    const normalized = normalizeLocalAttachment(file);
-    if (!normalized) continue;
-    const key = normalized.name + '\u0000' + normalized.size;
-    if (keys.has(key)) continue;
-    keys.add(key);
-    merged.push(normalized);
-  }
-  return merged;
-}
-
-async function hydrateStaticAttachment(attachment) {
-  const response = await fetch(attachment.url);
-  if (!response.ok) throw new Error('Could not read ' + attachment.name + ' from the published portfolio.');
-  const blob = await response.blob();
-  const file = new File([blob], attachment.name, { type: attachment.type || blob.type, lastModified: Date.now() });
-  return { name: file.name, type: file.type || 'application/octet-stream', size: file.size, blob: file };
-}
-
-async function makeLocalRecord(entry) {
-  return {
-    id: entry.id,
-    term: entry.term,
-    category: entry.category,
-    title: entry.title,
-    instructions: entry.instructions || '',
-    solution: entry.solution || '',
-    results: entry.results || '',
-    link: entry.link || '',
-    createdAt: entry.createdAt || Date.now(),
-    files: await Promise.all((entry.files || []).map(hydrateStaticAttachment)),
-    screenshots: await Promise.all((entry.screenshots || []).map(hydrateStaticAttachment))
-  };
-}
-
-async function loadPortfolioData() {
-  staticEntries = await readStaticEntries();
-  localDatabase = await openPortfolioDatabase();
-  const localRecords = await getLocalRecords(localDatabase);
-  localRecordsById = new Map(localRecords.filter(item => item && item.id).map(item => [String(item.id), item]));
-  revokeLocalUrls();
-
-  const combined = new Map(staticEntries.map(item => [item.id, item]));
-  for (const record of localRecordsById.values()) {
-    const id = String(record.id);
-    const published = combined.get(id);
-    const localEntry = {
-      ...(published || {}),
-      ...record,
-      files: mergeAttachments(published?.files, record.files),
-      screenshots: mergeAttachments(published?.screenshots, record.screenshots)
-    };
-    combined.set(id, localEntry);
-  }
-  entries = [...combined.values()];
-  renderDocuments();
-  statusMessage.textContent = 'Loaded ' + entries.length + ' entries. New uploads save in this browser profile.';
-}
-
 function formatBytes(size) {
   if (!Number.isFinite(size) || size <= 0) return '0 B';
   if (size < 1024) return size + ' B';
@@ -228,41 +103,6 @@ function appendDetail(container, label, value) {
   text.textContent = value;
   paragraph.append(heading, text);
   container.append(paragraph);
-}
-
-function appendFilePicker(form, labelText, name, accept) {
-  const label = document.createElement('label');
-  label.className = 'attachment-picker';
-  label.append(document.createTextNode(labelText));
-  const input = document.createElement('input');
-  input.type = 'file';
-  input.name = name;
-  input.multiple = true;
-  if (accept) input.accept = accept;
-  label.append(input);
-  form.append(label);
-}
-
-function createAttachmentEditor(item) {
-  const form = document.createElement('form');
-  form.className = 'entry-attachment-form';
-  form.dataset.entryId = item.id;
-  const heading = document.createElement('h5');
-  heading.textContent = 'Add files to this entry';
-  form.append(heading);
-  appendFilePicker(form, 'Add documents', 'files');
-  appendFilePicker(form, 'Add submission screenshots', 'screenshots', 'image/*');
-  const actions = document.createElement('div');
-  actions.className = 'form-actions';
-  const button = document.createElement('button');
-  button.type = 'submit';
-  button.textContent = 'Add selected files to this entry';
-  const status = document.createElement('p');
-  status.className = 'form-status';
-  status.setAttribute('aria-live', 'polite');
-  actions.append(button, status);
-  form.append(actions);
-  return form;
 }
 
 function createDocumentCard(item, expandedEntryIds) {
@@ -403,7 +243,6 @@ function createDocumentCard(item, expandedEntryIds) {
     screenshotSection.append(emptyScreenshots);
   }
   content.append(screenshotSection);
-  content.append(createAttachmentEditor(item));
 
   const details = document.createElement('section');
   details.className = 'document-details';
@@ -549,105 +388,15 @@ if ('IntersectionObserver' in window) {
   for (const section of document.querySelectorAll('main section[id]')) observer.observe(section);
 }
 
-function storedAttachments(input) {
-  return Array.from(input?.files || []).map(file => ({
-    name: file.name,
-    type: file.type || 'application/octet-stream',
-    size: file.size,
-    blob: file
-  }));
-}
-
-function setFormStatus(form, message, isError = false) {
-  const status = form.querySelector('.form-status');
-  if (!status) return;
-  status.textContent = message;
-  status.dataset.state = isError ? 'error' : 'success';
-}
-
-async function handleNewEntry(form) {
-  const title = String(form.elements.namedItem('title')?.value || '').trim();
-  const files = storedAttachments(form.elements.namedItem('files'));
-  const screenshots = storedAttachments(form.elements.namedItem('screenshots'));
-  if (!title) return setFormStatus(form, 'Enter an activity or document title.', true);
-  if (!files.length && !screenshots.length) return setFormStatus(form, 'Choose at least one document or screenshot.', true);
-
-  const record = {
-    id: createId(),
-    term: form.dataset.term,
-    category: String(form.elements.namedItem('category')?.value || 'other'),
-    title,
-    instructions: String(form.elements.namedItem('instructions')?.value || '').trim(),
-    solution: String(form.elements.namedItem('solution')?.value || '').trim(),
-    results: String(form.elements.namedItem('results')?.value || '').trim(),
-    link: safeWebLink(String(form.elements.namedItem('link')?.value || '').trim()),
-    createdAt: Date.now(),
-    files,
-    screenshots
-  };
-
-  try {
-    await saveLocalRecord(record);
-    form.reset();
-    await loadPortfolioData();
-    setFormStatus(form, 'Entry saved in this browser profile.');
-  } catch (error) {
-    const message = error?.name === 'QuotaExceededError'
-      ? 'This browser is out of storage space. Remove large files or free browser storage, then try again.'
-      : 'Could not save this entry. ' + (error?.message || 'Try again.');
-    setFormStatus(form, message, true);
-  }
-}
-
-async function handleAttachmentAdd(form) {
-  const files = storedAttachments(form.elements.namedItem('files'));
-  const screenshots = storedAttachments(form.elements.namedItem('screenshots'));
-  if (!files.length && !screenshots.length) return setFormStatus(form, 'Choose at least one document or screenshot.', true);
-  const id = form.dataset.entryId;
-
-  try {
-    let record = localRecordsById.get(id);
-    if (!record) {
-      const published = staticEntries.find(item => item.id === id);
-      if (!published) throw new Error('Could not find this entry. Reload the portfolio and try again.');
-      record = await makeLocalRecord(published);
-    }
-    record.files = [...(record.files || []), ...files];
-    record.screenshots = [...(record.screenshots || []), ...screenshots];
-    await saveLocalRecord(record);
-    localRecordsById.set(id, record);
-    form.reset();
-    await loadPortfolioData();
-    const updatedForm = [...document.querySelectorAll('.entry-attachment-form')].find(item => item.dataset.entryId === id);
-    setFormStatus(updatedForm || form, 'Files added to this entry in this browser profile.');
-  } catch (error) {
-    const message = error?.name === 'QuotaExceededError'
-      ? 'This browser is out of storage space. Remove large files or free browser storage, then try again.'
-      : 'Could not add these files. ' + (error?.message || 'Try again.');
-    setFormStatus(form, message, true);
-  }
-}
-
-document.addEventListener('submit', event => {
-  const form = event.target instanceof HTMLFormElement ? event.target : null;
-  if (!form) return;
-  if (form.matches('.entry-form')) {
-    event.preventDefault();
-    void handleNewEntry(form);
-  } else if (form.matches('.entry-attachment-form')) {
-    event.preventDefault();
-    void handleAttachmentAdd(form);
-  }
-});
-
 async function initializePortfolio() {
   try {
-    await loadPortfolioData();
-  } catch (error) {
-    revokeLocalUrls();
-    entries = staticEntries;
+    entries = await readStaticEntries();
     renderDocuments();
-    statusMessage.textContent = 'Loaded the published entries, but browser uploads are unavailable. ' + error.message;
+    statusMessage.textContent = 'Loaded ' + entries.length + ' published entries.';
+  } catch (error) {
+    entries = [];
+    renderDocuments();
+    statusMessage.textContent = 'Could not load the published portfolio documents. ' + error.message;
   }
 }
 
