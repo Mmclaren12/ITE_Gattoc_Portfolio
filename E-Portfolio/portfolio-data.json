@@ -1,0 +1,601 @@
+{
+  "version": 1,
+  "updatedAt": "2026-11-11T08:07:01.393Z",
+  "entries": [
+    {
+      "id": "0bd6a527-f6c1-4dc1-8344-f2dd60c0775c",
+      "term": "final",
+      "category": "classroom",
+      "title": "FINAL TERM ACTIVITY NO.2_PyhtonListTuples",
+      "instructions": "",
+      "solution": "",
+      "results": "",
+      "link": "",
+      "createdAt": 1794373247668,
+      "files": [
+        {
+          "name": "PythonListTuples_FinalTermActivityNo.2_Gattoc.pdf",
+          "type": "application/pdf",
+          "size": 732652,
+          "src": "assets/portfolio/final/0bd6a527-f6c1-4dc1-8344-f2dd60c0775c-files-01-PythonListTuples_FinalTermActivityNo.2_Gattoc.pdf"
+        },
+        {
+          "name": "Python_List_Tupples.ipynb",
+          "type": "application/octet-stream",
+          "size": 22183,
+          "src": "assets/portfolio/final/0bd6a527-f6c1-4dc1-8344-f2dd60c0775c-files-02-Python_List_Tupples.ipynb"
+        }
+      ],
+      "screenshots": [
+        {
+          "name": "Screenshot 2026-11-11 130040.png",
+          "type": "image/png",
+          "size": 45413,
+          "src": "assets/portfolio/final/0bd6a527-f6c1-4dc1-8344-f2dd60c0775c-screenshots-01-Screenshot_2026-11-11_130040.png"
+        }
+      ]
+    },
+    {
+      "id": "0ea29068-3a60-4753-8b74-3e8ba08bb0ba",
+      "term": "final",
+      "category": "classroom",
+      "title": "FINAL TERM ACTIVITY NO.1_PythonListTuples",
+      "instructions": "",
+      "solution": "",
+      "results": "",
+      "link": "",
+      "createdAt": 1794373167995,
+      "files": [
+        {
+          "name": "_FinalActivityNo.1_PythonListTupples_Gattoc.pdf",
+          "type": "application/pdf",
+          "size": 2152985,
+          "src": "assets/portfolio/final/0ea29068-3a60-4753-8b74-3e8ba08bb0ba-files-01-FinalActivityNo.1_PythonListTupples_Gattoc.pdf"
+        },
+        {
+          "name": "finalactivityno_1_pythonlisttuples_gattoc.py",
+          "type": "application/octet-stream",
+          "size": 8341,
+          "src": "assets/portfolio/final/0ea29068-3a60-4753-8b74-3e8ba08bb0ba-files-02-finalactivityno_1_pythonlisttuples_gattoc.py"
+        }
+      ],
+      "screenshots": [
+        {
+          "name": "Screenshot 2026-11-11 125919.png",
+          "type": "image/png",
+          "size": 71849,
+          "src": "assets/portfolio/final/0ea29068-3a60-4753-8b74-3e8ba08bb0ba-screenshots-01-Screenshot_2026-11-11_125919.png"
+        }
+      ]
+    },
+    {
+      "id": "1d4f39b0-651f-4980-857f-33991532b89d",
+      "term": "midterm",
+      "category": "quiz",
+      "title": "ITC C503 - Midterm Quiz Frequency Distribution Table",
+      "instructions": "",
+      "solution": "",
+      "results": "",
+      "link": "",
+      "createdAt": 1794372830138,
+      "files": [],
+      "screenshots": [
+        {
+          "name": "Screenshot 2026-11-11 125307.png",
+          "type": "image/png",
+          "size": 30501,
+          "src": "assets/portfolio/midterm/1d4f39b0-651f-4980-857f-33991532b89d-screenshots-01-Screenshot_2026-11-11_125307.png"
+        }
+      ]
+    },
+    {
+      "id": "397f1d43-87e3-4c51-b10a-5fa2d4e8c48e",
+      "term": "prelim",
+      "category": "classroom",
+      "title": "PRELIM ACTIVITY NO. 3 _ CREATING CHART",
+      "instructions": "",
+      "solution": "",
+      "results": "",
+      "link": "",
+      "createdAt": 1794331612471,
+      "files": [
+        {
+          "name": "_PRELIM ACTIVITY NO. 3 _ CREATING CHART_Gattoc.pdf",
+          "type": "application/pdf",
+          "size": 195977,
+          "src": "assets/portfolio/prelim/397f1d43-87e3-4c51-b10a-5fa2d4e8c48e-files-01-PRELIM_ACTIVITY_NO._3___CREATING_CHART_Gattoc.pdf"
+        }
+      ],
+      "screenshots": [
+        {
+          "name": "Screenshot 2026-11-11 012609.png",
+          "type": "image/png",
+          "size": 51009,
+          "src": "assets/portfolio/prelim/397f1d43-87e3-4c51-b10a-5fa2d4e8c48e-screenshots-01-Screenshot_2026-11-11_012609.png"
+        }
+      ]
+    },
+    {
+      "id": "46e2ab25-9f3b-400f-8b22-63c24ebc0291",
+      "term": "final",
+      "category": "classroom",
+      "title": "FINAL TERM ACTIVITY 3 _PYTHON WORD CLOUD",
+      "instructions": "",
+      "solution": "",
+      "results": "",
+      "link": "",
+      "createdAt": 1794373456458,
+      "files": [
+        {
+          "name": "finalTermActivity_Wordcloud_Gattoc.docx.pdf",
+          "type": "application/pdf",
+          "size": 1389654,
+          "src": "assets/portfolio/final/46e2ab25-9f3b-400f-8b22-63c24ebc0291-files-01-finalTermActivity_Wordcloud_Gattoc.docx.pdf"
+        },
+        {
+          "name": "finaltermactivity_wordcloud_gattoc.py",
+          "type": "application/octet-stream",
+          "size": 7867,
+          "src": "assets/portfolio/final/46e2ab25-9f3b-400f-8b22-63c24ebc0291-files-02-finaltermactivity_wordcloud_gattoc.py"
+        }
+      ],
+      "screenshots": [
+        {
+          "name": "Screenshot 2026-11-11 130408.png",
+          "type": "image/png",
+          "size": 46315,
+          "src": "assets/portfolio/final/46e2ab25-9f3b-400f-8b22-63c24ebc0291-screenshots-01-Screenshot_2026-11-11_130408.png"
+        }
+      ]
+    },
+    {
+      "id": "52283ec9-7a1d-4773-8a8e-1f0778b43b3a",
+      "term": "prelim",
+      "category": "quiz",
+      "title": "ITC C503- PRELIM QUIZ NO.1",
+      "instructions": "",
+      "solution": "",
+      "results": "",
+      "link": "",
+      "createdAt": 1794332455120,
+      "files": [],
+      "screenshots": [
+        {
+          "name": "Prelim Quiz 1.png",
+          "type": "image/png",
+          "size": 40321,
+          "src": "assets/portfolio/prelim/52283ec9-7a1d-4773-8a8e-1f0778b43b3a-screenshots-01-Prelim_Quiz_1.png"
+        }
+      ]
+    },
+    {
+      "id": "563ee64b-e755-4595-878d-da93aed87100",
+      "term": "midterm",
+      "category": "quiz",
+      "title": "ITC C503 MIDTERM QUIZ NO.2",
+      "instructions": "",
+      "solution": "",
+      "results": "",
+      "link": "",
+      "createdAt": 1794372891419,
+      "files": [],
+      "screenshots": [
+        {
+          "name": "Screenshot 2026-11-11 125444.png",
+          "type": "image/png",
+          "size": 25683,
+          "src": "assets/portfolio/midterm/563ee64b-e755-4595-878d-da93aed87100-screenshots-01-Screenshot_2026-11-11_125444.png"
+        }
+      ]
+    },
+    {
+      "id": "881d0689-22ae-4734-b1d5-c072b3815855",
+      "term": "final",
+      "category": "quiz",
+      "title": "FinalTerm Quiz_Python",
+      "instructions": "",
+      "solution": "",
+      "results": "",
+      "link": "",
+      "createdAt": 1794373516063,
+      "files": [],
+      "screenshots": [
+        {
+          "name": "Screenshot 2026-11-11 130507.png",
+          "type": "image/png",
+          "size": 23298,
+          "src": "assets/portfolio/final/881d0689-22ae-4734-b1d5-c072b3815855-screenshots-01-Screenshot_2026-11-11_130507.png"
+        }
+      ]
+    },
+    {
+      "id": "a857ccb8-4f10-4203-a7cd-03c8bfa1c741",
+      "term": "prelim",
+      "category": "classroom",
+      "title": "PRELIM ACTIVITY NO.2_ADVANCED EXCEL FORMULAS",
+      "instructions": "",
+      "solution": "",
+      "results": "",
+      "link": "",
+      "createdAt": 1794331241894,
+      "files": [
+        {
+          "name": "Practice File_Excel PRELIM_GATTOC (1).xlsx",
+          "type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "size": 130247,
+          "src": "assets/portfolio/prelim/a857ccb8-4f10-4203-a7cd-03c8bfa1c741-files-01-Practice_File_Excel_PRELIM_GATTOC_1_.xlsx"
+        }
+      ],
+      "screenshots": [
+        {
+          "name": "2.png",
+          "type": "image/png",
+          "size": 25747,
+          "src": "assets/portfolio/prelim/a857ccb8-4f10-4203-a7cd-03c8bfa1c741-screenshots-01-2.png"
+        }
+      ]
+    },
+    {
+      "id": "ac5a1b7f-ab40-44a8-8517-7c5c1e455ed8",
+      "term": "final",
+      "category": "classroom",
+      "title": "FINAL TERM ACTIVITY NO.3 - PYTHON MATPLOTLIB with PANDAS",
+      "instructions": "",
+      "solution": "",
+      "results": "",
+      "link": "",
+      "createdAt": 1794373335754,
+      "files": [
+        {
+          "name": "FinalTermAct3_Matplotlib_Gattoc_Mika.pdf",
+          "type": "application/pdf",
+          "size": 250984,
+          "src": "assets/portfolio/final/ac5a1b7f-ab40-44a8-8517-7c5c1e455ed8-files-01-FinalTermAct3_Matplotlib_Gattoc_Mika.pdf"
+        },
+        {
+          "name": "finaltermact3_matplotlib_gattoc.py",
+          "type": "application/octet-stream",
+          "size": 1445,
+          "src": "assets/portfolio/final/ac5a1b7f-ab40-44a8-8517-7c5c1e455ed8-files-02-finaltermact3_matplotlib_gattoc.py"
+        },
+        {
+          "name": "PYTHON Matplotlib with Pandas_Gattoc_Mika.pdf",
+          "type": "application/pdf",
+          "size": 261938,
+          "src": "assets/portfolio/final/ac5a1b7f-ab40-44a8-8517-7c5c1e455ed8-files-03-PYTHON_Matplotlib_with_Pandas_Gattoc_Mika.pdf"
+        },
+        {
+          "name": "python_matplotlib_with_pandas_gattoc.py",
+          "type": "application/octet-stream",
+          "size": 2459,
+          "src": "assets/portfolio/final/ac5a1b7f-ab40-44a8-8517-7c5c1e455ed8-files-04-python_matplotlib_with_pandas_gattoc.py"
+        }
+      ],
+      "screenshots": [
+        {
+          "name": "Screenshot 2026-11-11 130208.png",
+          "type": "image/png",
+          "size": 61974,
+          "src": "assets/portfolio/final/ac5a1b7f-ab40-44a8-8517-7c5c1e455ed8-screenshots-01-Screenshot_2026-11-11_130208.png"
+        }
+      ]
+    },
+    {
+      "id": "acfd236c-f0f9-4722-b2b7-0ca874ae95f4",
+      "term": "midterm",
+      "category": "laboratory",
+      "title": "MIDTERM ACTIVITY NO.3 - CREATING PIVOT TABLE AND PIVOT CHART",
+      "instructions": "",
+      "solution": "",
+      "results": "",
+      "link": "",
+      "createdAt": 1794372941367,
+      "files": [
+        {
+          "name": "PIVOT_TABLE_Gattoc_Mika (1).pdf",
+          "type": "application/pdf",
+          "size": 511641,
+          "src": "assets/portfolio/midterm/acfd236c-f0f9-4722-b2b7-0ca874ae95f4-files-01-PIVOT_TABLE_Gattoc_Mika_1_.pdf"
+        }
+      ],
+      "screenshots": [
+        {
+          "name": "Screenshot 2026-11-11 125532.png",
+          "type": "image/png",
+          "size": 52774,
+          "src": "assets/portfolio/midterm/acfd236c-f0f9-4722-b2b7-0ca874ae95f4-screenshots-01-Screenshot_2026-11-11_125532.png"
+        }
+      ]
+    },
+    {
+      "id": "bc8ee369-cae4-4a98-8f6c-9d7b7560165c",
+      "term": "prelim",
+      "category": "exam",
+      "title": "ITC C503- PRELIM EXAMINATION",
+      "instructions": "",
+      "solution": "",
+      "results": "",
+      "link": "",
+      "createdAt": 1794332522914,
+      "files": [],
+      "screenshots": [
+        {
+          "name": "Prelim Examination.png",
+          "type": "image/png",
+          "size": 40813,
+          "src": "assets/portfolio/prelim/bc8ee369-cae4-4a98-8f6c-9d7b7560165c-screenshots-01-Prelim_Examination.png"
+        }
+      ]
+    },
+    {
+      "id": "c4059de1-4bd5-408a-9336-ef53dda80884",
+      "term": "midterm",
+      "category": "classroom",
+      "title": "Midterm Assignment No.1 - Probability",
+      "instructions": "",
+      "solution": "",
+      "results": "",
+      "link": "",
+      "createdAt": 1794333063625,
+      "files": [],
+      "screenshots": [
+        {
+          "name": "Page 1.jpg",
+          "type": "image/jpeg",
+          "size": 5438650,
+          "src": "assets/portfolio/midterm/c4059de1-4bd5-408a-9336-ef53dda80884-screenshots-01-Page_1.jpg"
+        },
+        {
+          "name": "Page 2.jpg",
+          "type": "image/jpeg",
+          "size": 5108385,
+          "src": "assets/portfolio/midterm/c4059de1-4bd5-408a-9336-ef53dda80884-screenshots-02-Page_2.jpg"
+        },
+        {
+          "name": "Page3.jpg",
+          "type": "image/jpeg",
+          "size": 4527945,
+          "src": "assets/portfolio/midterm/c4059de1-4bd5-408a-9336-ef53dda80884-screenshots-03-Page3.jpg"
+        }
+      ]
+    },
+    {
+      "id": "c531f56a-1470-4216-bf20-33c555d8b4ea",
+      "term": "midterm",
+      "category": "classroom",
+      "title": "Midterm Activity No.1 - Grouped Frequency Distribution Table",
+      "instructions": "",
+      "solution": "",
+      "results": "",
+      "link": "",
+      "createdAt": 1794372592460,
+      "files": [
+        {
+          "name": "Gattoc_Mika_MidtermAct.xlsx",
+          "type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "size": 22918,
+          "src": "assets/portfolio/midterm/c531f56a-1470-4216-bf20-33c555d8b4ea-files-01-Gattoc_Mika_MidtermAct.xlsx"
+        }
+      ],
+      "screenshots": [
+        {
+          "name": "Screenshot 2026-11-11 124933.png",
+          "type": "image/png",
+          "size": 46545,
+          "src": "assets/portfolio/midterm/c531f56a-1470-4216-bf20-33c555d8b4ea-screenshots-01-Screenshot_2026-11-11_124933.png"
+        }
+      ]
+    },
+    {
+      "id": "c5622a6a-eb7f-489c-a2ae-e29ae31261c1",
+      "term": "final",
+      "category": "quiz",
+      "title": "FINALTERM SEATWORK NO.1 - PTYHON LIST",
+      "instructions": "",
+      "solution": "",
+      "results": "",
+      "link": "",
+      "createdAt": 1794373085589,
+      "files": [
+        {
+          "name": "ITC503_DocuPy_Gattoc.pdf",
+          "type": "application/pdf",
+          "size": 64313,
+          "src": "assets/portfolio/final/c5622a6a-eb7f-489c-a2ae-e29ae31261c1-files-01-ITC503_DocuPy_Gattoc.pdf"
+        },
+        {
+          "name": "SampleData_Gattoc.ipynb",
+          "type": "application/octet-stream",
+          "size": 7052,
+          "src": "assets/portfolio/final/c5622a6a-eb7f-489c-a2ae-e29ae31261c1-files-02-SampleData_Gattoc.ipynb"
+        }
+      ],
+      "screenshots": [
+        {
+          "name": "Screenshot 2026-11-11 125757.png",
+          "type": "image/png",
+          "size": 31711,
+          "src": "assets/portfolio/final/c5622a6a-eb7f-489c-a2ae-e29ae31261c1-screenshots-01-Screenshot_2026-11-11_125757.png"
+        }
+      ]
+    },
+    {
+      "id": "ce2e6f28-69a6-498f-bf02-d48b0e7360d0",
+      "term": "prelim",
+      "category": "classroom",
+      "title": "PRELIM ACTIVITY NO.1 _ CONDITIONAL FORMATTING FILTERING",
+      "instructions": "",
+      "solution": "",
+      "results": "",
+      "link": "",
+      "createdAt": 1794330582758,
+      "files": [
+        {
+          "name": "Practice File_Excel PRELIM_GATTOC (1).xlsx",
+          "type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "size": 130247,
+          "src": "assets/portfolio/prelim/ce2e6f28-69a6-498f-bf02-d48b0e7360d0-files-01-Practice_File_Excel_PRELIM_GATTOC_1_.xlsx"
+        }
+      ],
+      "screenshots": [
+        {
+          "name": "2.png",
+          "type": "image/png",
+          "size": 25747,
+          "src": "assets/portfolio/prelim/ce2e6f28-69a6-498f-bf02-d48b0e7360d0-screenshots-01-2.png"
+        }
+      ]
+    },
+    {
+      "id": "d8fa2cb8-1f3d-4034-b003-b343d5374fb5",
+      "term": "prelim",
+      "category": "quiz",
+      "title": "ITC C503 PRELIM QUIZ NO.2",
+      "instructions": "",
+      "solution": "",
+      "results": "",
+      "link": "",
+      "createdAt": 1794332487173,
+      "files": [],
+      "screenshots": [
+        {
+          "name": "Prelim Quiz 2.png",
+          "type": "image/png",
+          "size": 29024,
+          "src": "assets/portfolio/prelim/d8fa2cb8-1f3d-4034-b003-b343d5374fb5-screenshots-01-Prelim_Quiz_2.png"
+        }
+      ]
+    },
+    {
+      "id": "d99900ab-a06b-4e6c-8de4-212c185265e4",
+      "term": "midterm",
+      "category": "classroom",
+      "title": "MIDTERM ACTIVITY NO.2 - STATISTICAL CHART",
+      "instructions": "",
+      "solution": "",
+      "results": "",
+      "link": "",
+      "createdAt": 1794372729363,
+      "files": [
+        {
+          "name": "MidActivtity2_StatisticalCharts_Gattoc 1.xlsx",
+          "type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "size": 37038,
+          "src": "assets/portfolio/midterm/d99900ab-a06b-4e6c-8de4-212c185265e4-files-01-MidActivtity2_StatisticalCharts_Gattoc_1.xlsx"
+        }
+      ],
+      "screenshots": [
+        {
+          "name": "Screenshot 2026-11-11 125150.png",
+          "type": "image/png",
+          "size": 58972,
+          "src": "assets/portfolio/midterm/d99900ab-a06b-4e6c-8de4-212c185265e4-screenshots-01-Screenshot_2026-11-11_125150.png"
+        }
+      ]
+    },
+    {
+      "id": "e4070301-e4be-4fb7-b323-5b83ee1ea2b4",
+      "term": "prelim",
+      "category": "quiz",
+      "title": "PRELIM SEATWORK NO.1_DESCRIPTIVE STATISTICS",
+      "instructions": "",
+      "solution": "",
+      "results": "",
+      "link": "",
+      "createdAt": 1794330686281,
+      "files": [
+        {
+          "name": "PRELIM_SW_GATTOC.pdf",
+          "type": "application/pdf",
+          "size": 103457,
+          "src": "assets/portfolio/prelim/e4070301-e4be-4fb7-b323-5b83ee1ea2b4-files-01-PRELIM_SW_GATTOC.pdf"
+        }
+      ],
+      "screenshots": [
+        {
+          "name": "Screenshot 2026-11-11 011113.png",
+          "type": "image/png",
+          "size": 32853,
+          "src": "assets/portfolio/prelim/e4070301-e4be-4fb7-b323-5b83ee1ea2b4-screenshots-01-Screenshot_2026-11-11_011113.png"
+        }
+      ]
+    },
+    {
+      "id": "eb2ef16d-5b06-4153-9f22-2a45d56e7bbf",
+      "term": "midterm",
+      "category": "project",
+      "title": "ITC C503 MIDTERM PROJECT",
+      "instructions": "",
+      "solution": "",
+      "results": "",
+      "link": "",
+      "createdAt": 1794372999368,
+      "files": [
+        {
+          "name": "ITC C503 MIDTERM PROJECT- Gattoc.xlsx",
+          "type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "size": 162801,
+          "src": "assets/portfolio/midterm/eb2ef16d-5b06-4153-9f22-2a45d56e7bbf-files-01-ITC_C503_MIDTERM_PROJECT-_Gattoc.xlsx"
+        },
+        {
+          "name": "ITC503_MidtermProject_Gattoc.pdf",
+          "type": "application/pdf",
+          "size": 335725,
+          "src": "assets/portfolio/midterm/eb2ef16d-5b06-4153-9f22-2a45d56e7bbf-files-02-ITC503_MidtermProject_Gattoc.pdf"
+        }
+      ],
+      "screenshots": [
+        {
+          "name": "Screenshot 2026-11-11 125625.png",
+          "type": "image/png",
+          "size": 48715,
+          "src": "assets/portfolio/midterm/eb2ef16d-5b06-4153-9f22-2a45d56e7bbf-screenshots-01-Screenshot_2026-11-11_125625.png"
+        }
+      ]
+    },
+    {
+      "id": "f3086fd8-9fba-4eb2-8e64-3b0656a2da51",
+      "term": "midterm",
+      "category": "project",
+      "title": "I.T ORGANIZATION MEMBERSHIP",
+      "instructions": "",
+      "solution": "",
+      "results": "",
+      "link": "",
+      "createdAt": 1794372645664,
+      "files": [],
+      "screenshots": [
+        {
+          "name": "JPCS Officer Registration.jpg",
+          "type": "image/jpeg",
+          "size": 64781,
+          "src": "assets/portfolio/midterm/f3086fd8-9fba-4eb2-8e64-3b0656a2da51-screenshots-01-JPCS_Officer_Registration.jpg"
+        },
+        {
+          "name": "Blockchain Registration.jpg",
+          "type": "image/jpeg",
+          "size": 46044,
+          "src": "assets/portfolio/midterm/f3086fd8-9fba-4eb2-8e64-3b0656a2da51-screenshots-02-Blockchain_Registration.jpg"
+        },
+        {
+          "name": "ENC Recruitment Form 1.jpg",
+          "type": "image/jpeg",
+          "size": 32373,
+          "src": "assets/portfolio/midterm/f3086fd8-9fba-4eb2-8e64-3b0656a2da51-screenshots-03-ENC_Recruitment_Form_1.jpg"
+        },
+        {
+          "name": "Screenshot_20260918_111719_com_android_chrome_ChromeTabbedActivity 1.jpg",
+          "type": "image/jpeg",
+          "size": 563847,
+          "src": "assets/portfolio/midterm/f3086fd8-9fba-4eb2-8e64-3b0656a2da51-screenshots-04-Screenshot_20260918_111719_com_android_chrome_ChromeTabbedActivity_1.jpg"
+        },
+        {
+          "name": "Screenshot 2026-11-11 125011.png",
+          "type": "image/png",
+          "size": 70373,
+          "src": "assets/portfolio/midterm/f3086fd8-9fba-4eb2-8e64-3b0656a2da51-screenshots-05-Screenshot_2026-11-11_125011.png"
+        }
+      ]
+    }
+  ]
+}
